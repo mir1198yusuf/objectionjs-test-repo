@@ -1,18 +1,19 @@
-const functionOne = require("./functions");
-const { getTracker } = require("knex-mock-client");
+const functionOne = require('./functions');
+const { getTracker } = require('knex-mock-client');
 
-let tracker;
 
-beforeEach(() => {
-  tracker = getTracker();
-});
+describe('List of tests', () => {
+  let tracker;
 
-afterEach(() => {
-  // tracker.reset();
-});
+  beforeEach(() => {
+    tracker = getTracker();
+  });
 
-describe("List of tests", () => {
-  test("Test 1 ", async () => {
+  afterEach(() => {
+    // tracker.reset();
+  });
+
+  test('Test 1 ', async () => {
     tracker.on
       .any(({ method, sql, bindings }) => {
         console.log(sql, bindings);

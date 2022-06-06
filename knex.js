@@ -1,11 +1,11 @@
 const { MockClient } = require("knex-mock-client");
+const knex = require('knex');
 
 const createKnex = function () {
-  const config = {
+  return knex({
     client: MockClient,
     dialect: "pg",
-  };
-  return config;
+  });
 };
 
 module.exports = createKnex;
