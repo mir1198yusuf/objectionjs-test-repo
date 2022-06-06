@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "knex": "^2.1.0",
+    "knex-mock-client": "^1.8.4",
+    "objection": "^3.0.1",
+    "pg": "^8.7.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0"
+  }
+}
