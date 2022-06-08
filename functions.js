@@ -4,4 +4,9 @@ const functionOne = async function () {
   return {};
 };
 
-module.exports = functionOne;
+const functionTwo = async function () {
+  const abc = await AbcModel.query().findOne("id", 1);
+  await abc.$query().update({ x: 2 });
+};
+
+module.exports = { functionOne, functionTwo };
